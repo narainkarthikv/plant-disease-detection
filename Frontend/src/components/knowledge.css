@@ -1,0 +1,84 @@
+.knowledge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+  
+  .knowledge-card {
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #e0f2e9; 
+    text-align: center;
+    width: 300px; 
+    height: 200px; 
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .knowledge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-image {
+    position: relative;
+    overflow: hidden;
+    height: 150px; 
+    width: 100%;
+  }
+  
+  .card-image img {
+    width: 85%;
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 1s ease, opacity 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  .knowledge-card:hover .card-image img {
+    transform: scale(0.9); 
+    opacity: 0; 
+  }
+  
+  .knowledge-card .card-content {
+    display: block;
+    transform: translateY(-100%); 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(224, 242, 233, 0.9); 
+    text-align: left;
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.3s ease;
+  }
+  
+  .knowledge-card:hover .card-content {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+  
+  .knowledge-card:hover h2 {
+    opacity: 0;
+  }
+  
+  .knowledge-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+    transition: opacity 0.5s ease; 
+  }
+  
+  .knowledge-card p.description {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+  

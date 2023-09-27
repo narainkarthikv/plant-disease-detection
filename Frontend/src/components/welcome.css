@@ -1,0 +1,84 @@
+.welcome-container {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 100vh;
+  border-radius: 30px;
+  background-color: #000000;
+  text-align: center;
+  opacity: 85%;
+}
+
+.welcome-container h1,
+.welcome-container p {
+  margin-bottom: 1rem;
+}
+
+.welcome-container h1 {
+  font-size: 3rem;
+}
+
+.welcome-container p {
+  font-size: 1.5rem;
+}
+
+.start-button {
+  display: inline-block;
+  background-color: #f05454;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.start-button:hover {
+  background-color: #d22f2f;
+  transform: scale(1.05);
+}
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+  .welcome-container {
+    padding: 1rem;
+    border-radius: 30px; 
+  }
+  .welcome-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+}
+
+.start-button.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+  animation: buttonFadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.welcome-container h1.fade-in,
+.start-button.slide-up {
+  animation: fadeIn 1.5s ease-in-out, buttonFadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.start-button:hover {
+  background-color: #d22f2f;
+  transform: scale(1.05);
+}
